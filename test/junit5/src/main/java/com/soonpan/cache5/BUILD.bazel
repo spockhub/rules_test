@@ -1,0 +1,15 @@
+java_library(
+    name = "bazel_cache5_lib",
+    srcs = glob(["*.java"]),
+    visibility = ["//visibility:public"],
+    deps = [],
+)
+
+java_binary(
+    name = "cache5",
+    main_class = "com.soonpan.cache5.Cache",
+    visibility = ["//visibility:public"],
+    runtime_deps = [
+        ":bazel_cache5_lib",
+    ],
+)

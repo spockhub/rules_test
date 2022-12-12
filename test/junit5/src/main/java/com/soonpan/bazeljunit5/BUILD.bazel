@@ -1,0 +1,15 @@
+java_library(
+    name = "hellolib",
+    srcs = glob(["*.java"]),
+    visibility = ["//visibility:public"],
+    deps = [],
+)
+
+java_binary(
+    name = "hello",
+    main_class = "com.soonpan.bazeljunit5.Hello5",
+    visibility = ["//visibility:public"],
+    runtime_deps = [
+        ":hellolib",
+    ],
+)

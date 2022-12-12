@@ -1,0 +1,18 @@
+load("@rules_test//junit5:defs.bzl", "java_junit5_test")
+
+java_junit5_test(
+    name = "cache_tests",
+    srcs = glob(["*.java"]),
+    resources = glob(["src/test/resources/**"]),
+    test_packages = [
+        "com.soonpan.cache5",
+    ],
+    visibility = ["//visibility:__subpackages__"],
+    runtime_deps = [
+        "@maven//:org_slf4j_slf4j_simple",
+    ],
+    deps = [
+        "//test/junit5/src/main/java/com/soonpan/cache5:bazel_cache5_lib",
+        "@maven//:commons_io_commons_io",
+    ],
+)
