@@ -35,7 +35,7 @@ def java_junit5_test(name, srcs, test_packages = [], deps = [], runtime_deps = [
             "@maven//:org_junit_platform_junit_platform_suite_api",
             "@maven//:org_apiguardian_apiguardian_api",
             "@maven//:org_opentest4j_opentest4j",
-            "//tools/junit5:junit5_launcher",
+            "//junit5:junit5_launcher",
         ],
         runtime_deps = runtime_deps + [
             "@maven//:org_junit_platform_junit_platform_commons",
